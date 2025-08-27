@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import InformationHub from "./pages/InformationHub";
 import Partners from "./pages/Partners";
+import Box from "./pages/ppl"
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/info" element={<InformationHub />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/ppl" element={<Box />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
