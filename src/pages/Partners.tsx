@@ -19,11 +19,11 @@ const Partners = () => {
           className="container mx-auto px-8 h-24 flex items-center justify-between"
         >
           <div className="flex items-center space-x-2">
-            <a href="/">
+            <a href="#/">
               <motion.img 
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                src="/uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"
+                src={import.meta.env.BASE_URL + "/uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"}
                 alt="CSSA Logo"
                 className="h-20 w-auto ml-1"
               />
@@ -34,10 +34,10 @@ const Partners = () => {
             {navItems.map((item, index) => (
               <motion.a
                 key={item}
-                href={item === "Home" ? "/" 
-                  : item === "Info" ? "/information-hub" 
-                  : item === "Events" ? "/events" 
-                  : `/${item.toLowerCase()}`}
+                href={item === "Home" ? "#/" 
+                  : item === "Info" ? "#/information-hub" 
+                  : item === "Events" ? "#/events" 
+                  : `#/${item.toLowerCase()}`}
                 className="nav-link text-[#a0202b] text-xl font-bold"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -183,12 +183,12 @@ const Partners = () => {
 
         <div className="flex items-center space-x-2">
           <img 
-            src="/uploads/e297e980-9b24-4317-9a39-edb5c28f857f.png" 
+            src={import.meta.env.BASE_URL + "/uploads/e297e980-9b24-4317-9a39-edb5c28f857f.png" }
             alt="Brown Logo" 
             className="h-20 w-auto"
           />
           <img 
-            src="/uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png" 
+            src={import.meta.env.BASE_URL + "/uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png" }
             alt="CSSA Logo" 
             className="h-24 w-auto"
           />
