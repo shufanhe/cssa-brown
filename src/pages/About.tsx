@@ -72,7 +72,7 @@ const People = () => {
               <motion.img 
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                src="/lovable-uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"
+                src="/uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"
                 alt="CSSA Logo"
                 className="h-20 w-auto ml-1"
               />
@@ -191,12 +191,12 @@ const People = () => {
 
         <div className="flex items-center space-x-2">
           <img 
-            src="/lovable-uploads/e297e980-9b24-4317-9a39-edb5c28f857f.png" 
+            src="/uploads/e297e980-9b24-4317-9a39-edb5c28f857f.png" 
             alt="Brown Logo" 
             className="h-20 w-auto"
           />
           <img 
-            src="/lovable-uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png" 
+            src="/uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png" 
             alt="CSSA Logo" 
             className="h-24 w-auto"
           />

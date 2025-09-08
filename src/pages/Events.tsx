@@ -14,19 +14,19 @@ const Events = () => {
       date: "February 15, 2023",
       title: "Lunar New Year Celebration 2023",
       description: "Our biggest celebration of the year brought together over 200 students, faculty, and community members for an evening of traditional performances, including lion dance, musical presentations, and cultural demonstrations. The event featured authentic Chinese cuisine and interactive cultural activities that showcased the rich traditions of Lunar New Year celebrations.",
-      image: "/lovable-uploads/93fec79f-b702-42af-8871-50e270596a55.png"
+      image: "/uploads/93fec79f-b702-42af-8871-50e270596a55.png"
     },
     {
       date: "November 10, 2023",
       title: "Mid-Autumn Festival 2023",
       description: "A magical evening under the stars celebrating the Mid-Autumn Festival with mooncakes, lanterns, and traditional storytelling. Students and faculty came together to share cultural traditions and create lasting memories.",
-      image: "/lovable-uploads/93fec79f-b702-42af-8871-50e270596a55.png"
+      image: "/uploads/93fec79f-b702-42af-8871-50e270596a55.png"
     },
     {
       date: "October 1, 2023",
       title: "Chinese Cultural Fair 2023",
       description: "An immersive experience featuring traditional Chinese arts, calligraphy workshops, and performances. The event highlighted the diverse cultural heritage of China through interactive exhibitions and demonstrations.",
-      image: "/lovable-uploads/93fec79f-b702-42af-8871-50e270596a55.png"
+      image: "/uploads/93fec79f-b702-42af-8871-50e270596a55.png"
     }
   ];
 
@@ -45,7 +45,7 @@ const Events = () => {
               <motion.img 
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                src="/lovable-uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"
+                src="/uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"
                 alt="CSSA Logo"
                 className="h-20 w-auto ml-1"
               />
@@ -210,12 +210,12 @@ const Events = () => {
 
         <div className="flex items-center space-x-2">
           <img 
-            src="/lovable-uploads/e297e980-9b24-4317-9a39-edb5c28f857f.png" 
+            src="/uploads/e297e980-9b24-4317-9a39-edb5c28f857f.png" 
             alt="Brown Logo" 
             className="h-20 w-auto"
           />
           <img 
-            src="/lovable-uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png" 
+            src="/uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png" 
             alt="CSSA Logo" 
             className="h-24 w-auto"
           />
