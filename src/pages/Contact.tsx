@@ -8,13 +8,14 @@ import RibbonTrail from '../components/RibbonTrail';
 import { Send, Mail, MapPin, Linkedin } from 'lucide-react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Link } from 'react-router-dom';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const { toast } = useToast();
-  const navItems = ["Home", "People", "Partners", "Contact", "Events", "Info"];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,46 +31,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen font-['Georgia'] relative bg-white">
       <RibbonTrail />
-       <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 shadow-lg">
-         <motion.div 
-           initial={{ y: -100 }}
-           animate={{ y: 0 }}
-           transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
-           className="container mx-auto px-8 h-24 flex items-center justify-between"
-         >
-           <div className="flex items-center space-x-2">
-             <a href="#/">
-               <motion.img 
-                 whileHover={{ scale: 1.05 }}
-                 transition={{ type: "spring", stiffness: 300 }}
-                 src={ import.meta.env.BASE_URL +"/uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"}
-                 alt="CSSA Logo"
-                 className="h-20 w-auto ml-1"
-               />
-             </a>
-           </div>
- 
-           <div className="hidden md:flex space-x-8">
-             {navItems.map((item, index) => (
-               <motion.a
-                 key={item}
-                 href={item === "Home" ? "#/" 
-                   : item === "Info" ? "#/information-hub" 
-                   : item === "Events" ? "#/events" 
-                   : `#/${item.toLowerCase()}`}
-                 className="nav-link text-[#a0202b] text-xl font-bold"
-                 initial={{ opacity: 0, y: -20 }}
-                 animate={{ opacity: 1, y: 0 }}
-                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                 whileHover={{ scale: 1.05 }}
-               >
-                 {item}
-               </motion.a>
-             ))}
-           </div>
-         </motion.div>
-       </nav>
-
+       <Header />
       <div className="container mx-auto px-4 pt-32 pb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -279,55 +241,7 @@ const Contact = () => {
           </div>
         </div>
       </motion.section>
-      <footer className="bg-white text-[#a0202b] mt-0 py-10 px-6 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-sm">
-
-        <div className="flex items-center space-x-2">
-          <img 
-            src={import.meta.env.BASE_URL + "/uploads/e297e980-9b24-4317-9a39-edb5c28f857f.png" }
-            alt="Brown Logo" 
-            className="h-20 w-auto"
-          />
-          <img 
-            src={import.meta.env.BASE_URL + "/uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png" }
-            alt="CSSA Logo" 
-            className="h-24 w-auto"
-          />
-        </div>
-
-
-          <div className="flex flex-col md:flex-row gap-8 text-center md:text-left justify-center gap-32 md:justify-start">
-            
-            <div>
-              <h4 className="font-bold text-base mb-2">Address</h4>
-              <p>Brown University<br />Providence, RI 02912</p>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-base mb-2">Email</h4>
-              <p>
-                <a href="brown_cssa@hotmail.com" className="underline hover:text-[#7a1822]">
-                brown_cssa@hotmail.com
-                </a>
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-base mb-2">LinkedIn</h4>
-              <p>
-                <a 
-                  href="https://www.linkedin.com/company/brown-chinese-students-and-scholars-association/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="underline hover:text-[#7a1822]"
-                >
-                  linkedin.com/company/<br />brown-chinese-students-and-scholars-association/
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
