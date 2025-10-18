@@ -195,189 +195,147 @@ const Index: React.FC = () => {
       </section>
 
       {/* Introduction */}
-      <section className="relative py-20 bg-white overflow-hidden">
-        {/* Background clouds */}
+      <section id="who-we-are" className="relative min-h-[calc(100vh-6rem)] bg-white overflow-hidden flex flex-col justify-center">        
+        {/* Background corners */}
         <img 
           src={import.meta.env.BASE_URL + "uploads/top-left.png"} 
           alt="Top Left"
-          className="absolute top-0 left-0 w-64 h-64 object-contain"
+          className="absolute top-0 left-0 w-96 h-auto object-contain"
         />
         <img 
           src={import.meta.env.BASE_URL + "uploads/top-right.png"} 
           alt="Top Right"
-          className="absolute top-0 right-0 w-64 h-64 object-contain"
+          className="absolute top-0 right-0 w-96 h-auto object-contain"
         />
         <img 
           src={import.meta.env.BASE_URL + "uploads/bottom-left.png"} 
           alt="Bottom Left"
-          className="absolute bottom-0 left-0 w-64 h-64 object-contain"
+          className="absolute bottom-0 left-0 w-96 h-auto object-contain"
         />
         <img 
           src={import.meta.env.BASE_URL + "uploads/bottom-right.png"} 
           alt="Bottom Right"
-          className="absolute bottom-0 right-0 w-64 h-64 object-contain"
+          className="absolute bottom-0 right-0 w-96 h-auto object-contain"
         />
-        
 
-    <div className="bg-[#FFC9CA]/20 p-8 rounded-2xl relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-        {/* Text */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-left space-y-8 flex-1"
-        >
-          <motion.h2 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+        {/* Content */}
+        <div className="bg-[#FFC9CA]/20 p-8 rounded-2xl relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Text */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-[#a0202b]"
+            className="text-left space-y-8 flex-1"
           >
-            Who We Are
-          </motion.h2>
+            <motion.h2 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold text-[#a0202b]"
+            >
+              Who We Are
+            </motion.h2>
 
-          <motion.p 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-lg md:text-xl text-gray-700 leading-relaxed font-chinese"
-          >
-            布朗大学中国学生学者联合会 (BrownCSSA) 是由布朗大学中国学生、学者于1998年成立的非盈利性组织。BrownCSSA旨在为远渡重洋的中国学生、学者提供一个互相交流、互相帮助、增进友谊的平台；并在此基础上开展丰富多彩的学术、娱乐、体育和文化类活动，为中国学生、学者提供生活、学业、事业发展上的帮助；同时始终肩负着弘扬中华民族文化的使命，致力于提升美国主流社会对中华文化，及华人群体的文化的社会认同感；促进中国留学生、学者与美国人以及在美华人的交流。
-          </motion.p>
+            <motion.p 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-lg md:text-xl text-gray-700 leading-relaxed font-chinese"
+            >
+              布朗大学中国学生学者联合会 (BrownCSSA) 是由布朗大学中国学生、学者于1998年成立的非盈利性组织。
+              BrownCSSA旨在为远渡重洋的中国学生、学者提供一个互相交流、互相帮助、增进友谊的平台；
+              并在此基础上开展丰富多彩的学术、娱乐、体育和文化类活动，为中国学生、学者提供生活、学业、事业发展上的帮助；
+              同时始终肩负着弘扬中华民族文化的使命，致力于提升美国主流社会对中华文化，及华人群体的文化的社会认同感；
+              促进中国留学生、学者与美国人以及在美华人的交流。
+            </motion.p>
 
-          <a 
-            href="#/information-hub" 
-            className="inline-flex items-center bg-[#FFE8E8] text-[#AB1F24] font-semibold text-lg px-4 py-2 rounded-2xl hover:bg-[#ffdcdc] transition-colors duration-200"
-          >
-            RESOURCES FOR NEW STUDENTS
-            <img 
-              src={import.meta.env.BASE_URL + "uploads/arrow.png"} 
-              alt="Arrow pointing top-left"
-              className="ml-2 w-6 h-6 object-contain"
+            <a 
+              href="#/information-hub" 
+              className="inline-flex items-center bg-[#FFE8E8] text-[#AB1F24] font-semibold text-lg px-4 py-2 rounded-2xl hover:bg-[#ffdcdc] transition-colors duration-200"
+            >
+              RESOURCES FOR NEW STUDENTS
+              <img 
+                src={import.meta.env.BASE_URL + "uploads/arrow.png"} 
+                alt="Arrow pointing top-left"
+                className="ml-2 w-6 h-6 object-contain"
+              />
+            </a>
+          </motion.div>
+
+          {/* Logo */}
+          <div className="flex justify-center md:justify-end">
+            <img
+              src={import.meta.env.BASE_URL + "uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"}
+              alt="Who We Are illustration"
+              className="w-64 md:w-80 h-auto rounded-xl object-contain"
             />
-          </a>
-        </motion.div>
-
-        {/* logo */}
-        <div className="flex justify-center md:justify-end">
-          <img
-            src={import.meta.env.BASE_URL + "uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"}
-            alt="Who We Are illustration"
-            className="w-64 md:w-80 h-auto rounded-xl object-contain"
-          />
+          </div>
         </div>
-      </div>
 
+        {/* Down Arrow Button */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+          <button
+            onClick={() => {
+              const nextSection = document.querySelector('#events');
+              if (nextSection) nextSection.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="bg-[#a0202b] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-[#8a1b24] transition-colors duration-200"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
       </section>
 
-
-
       {/* Upcoming Events Section - Added from Events.tsx */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-8">
-          <motion.h2 
+      <section id="events" className="bg-white relative min-h-[calc(100vh-6rem)] overflow-hidden flex flex-col justify-center">
+       {/* Background corners */}
+        <img 
+          src={import.meta.env.BASE_URL + "uploads/top-right.png"} 
+          alt="Top Right"
+          className="absolute top-0 right-0 w-96 h-auto object-contain"
+        />
+        <img 
+          src={import.meta.env.BASE_URL + "uploads/bottom-left.png"} 
+          alt="Bottom Left"
+          className="absolute bottom-0 left-0 w-96 h-auto object-contain"
+        />
+        <img 
+          src={import.meta.env.BASE_URL + "uploads/bottom-right.png"} 
+          alt="Bottom Right"
+          className="absolute bottom-0 right-0 w-96 h-auto object-contain"
+        />
+
+        <div className="container mx-auto px-8 text-center">
+          <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-[#a0202b] mb-12 text-center"
+            className="text-xl md:text-2xl font-semibold text-black mb-8"
           >
-            Upcoming Events
+            Stay tuned for upcoming events!
           </motion.h2>
-          
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12 max-w-6xl mx-auto">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden"
-            >
-              <div className="p-6">
-                <div className="flex items-center mb-4 text-[#a0202b]">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  <span className="text-sm">March 15, 2024</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Lunar New Year Celebration</h3>
-                <p className="text-gray-600 mb-4">Join us for our annual Lunar New Year celebration with traditional performances, food, and festivities!</p>
-                <Link to="/events" className="text-[#a0202b] font-semibold hover:underline">Learn More →</Link>
-              </div>
-            </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden"
-            >
-              <div className="p-6">
-                <div className="flex items-center mb-4 text-[#a0202b]">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  <span className="text-sm">April 5, 2024</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Cultural Exchange Workshop</h3>
-                <p className="text-gray-600 mb-4">A workshop focused on bridging cultural gaps and fostering understanding between different communities.</p>
-                <Link to="/events" className="text-[#a0202b] font-semibold hover:underline">Learn More →</Link>
-              </div>
-            </motion.div>
+          <p className="text-[#a0202b] text-3xl mb-10 font-chinese">
+            请关注我们的微信公众号Brown CSSA，加入我们的订阅列表
+          </p>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden"
-            >
-              <div className="p-6">
-                <div className="flex items-center mb-4 text-[#a0202b]">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  <span className="text-sm">May 1, 2024</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Spring Festival</h3>
-                <p className="text-gray-600 mb-4">Welcome spring with traditional Chinese music, dance performances, and authentic cuisine.</p>
-                <Link to="/events" className="text-[#a0202b] font-semibold hover:underline">Learn More →</Link>
-              </div>
-            </motion.div>
-          </div>
-          
-          <div className="text-center">
-            <Link to="/events">
-              <Button className="bg-[#a0202b] hover:bg-[#8a1b24] text-white font-semibold">
-                View All Events
-              </Button>
-            </Link>
+          <div className="flex justify-center items-center gap-2 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[#a0202b]"
+            />
+            <button className="bg-[#a0202b] text-white px-6 py-2 rounded-lg hover:bg-[#8a1b24]">
+              Enter
+            </button>
           </div>
         </div>
       </section>
-
-      {/* Social Media Icons Bar */}
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="w-full bg-white/90 backdrop-blur-md py-6 shadow-sm"
-      >
-        <div className="container mx-auto flex justify-center items-center space-x-12">
-          <a 
-            href="mailto:brown_cssa@hotmail.com" 
-            className="text-[#a0202b] hover:text-primary transition-colors group"
-          >
-            <Mail size={32} className="group-hover:scale-110 transition-transform" />
-          </a>
-          <a 
-            href="https://www.instagram.com/brown_cssa/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-[#a0202b] hover:text-primary transition-colors group"
-          >
-            <Instagram size={32} className="group-hover:scale-110 transition-transform" />
-          </a>
-        </div>
-      </motion.div>
 
       <Footer />
 
