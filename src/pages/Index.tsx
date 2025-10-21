@@ -282,13 +282,20 @@ const Index: React.FC = () => {
               const nextSection = document.querySelector('#events');
               if (nextSection) nextSection.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="bg-[#a0202b] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-[#8a1b24] transition-colors duration-200"
+            className="bg-[#FF0000]/10 text-[#772222] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-[#a0202b]/30 transition-colors duration-200"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#a0202b"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
         </div>
+
       </section>
 
       {/* Upcoming Events Section - Added from Events.tsx */}
