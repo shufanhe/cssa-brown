@@ -15,11 +15,17 @@ const Footer: React.FC = () => {
         {/* Icons + Address */}
         <div className="flex flex-col items-center md:items-start gap-4 md:ml-16">
           <div className="flex space-x-4">
-            <img
-              src={import.meta.env.BASE_URL + "uploads/WeChat.png"}
-              alt="Wechat"
-              className="h-6 w-6"
-            />
+            <a
+              href={import.meta.env.BASE_URL + "uploads/WeChatQR.png"} // different image
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={import.meta.env.BASE_URL + "uploads/WeChat.png"} // small icon
+                alt="WeChat"
+                className="h-6 w-6 cursor-pointer hover:opacity-80 transition-opacity"
+              />
+            </a>
 
             <a
               href="https://www.instagram.com/brown_cssa/"

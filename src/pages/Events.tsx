@@ -27,8 +27,12 @@ const Events = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    scrollToIndex(activeIndex);
+  }, []);
 
   const scrollToIndex = (index: number) => {
     if (!containerRef.current) return;
@@ -39,7 +43,7 @@ const Events = () => {
     container.scrollTo({ left: offset, behavior: 'smooth' });
     setActiveIndex(index);
   };
-
+  
   // Optional: update active index on scroll (center card)
   const handleScroll = () => {
     if (!containerRef.current) return;
