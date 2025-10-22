@@ -8,6 +8,7 @@ import RibbonTrail from '../components/RibbonTrail';
 import { Send, Mail, MapPin, Linkedin } from 'lucide-react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -16,15 +17,49 @@ const Contact = () => {
   const { toast } = useToast();
   const navItems = ["Home", "People", "Partners", "Contact", "Events", "Info"];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. We'll get back to you soon.",
-    });
-    setName('');
-    setEmail('');
-    setMessage('');
+    
+    try {
+      // EmailJS configuration from environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_contact';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const recipientEmail = import.meta.env.VITE_CONTACT_RECIPIENT_EMAIL || import.meta.env.VITE_RECIPIENT_EMAIL;
+
+      // Check if EmailJS is configured
+      if (!serviceId || !publicKey || !recipientEmail) {
+        throw new Error('EmailJS configuration is missing. Please check environment variables.');
+      }
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          to_email: recipientEmail,
+          name: name,
+          email: email,
+          message: message,
+        },
+        publicKey
+      );
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. We'll get back to you soon.",
+      });
+      setName('');
+      setEmail('');
+      setMessage('');
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Message failed",
+        description: "There was an error sending your message. Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (

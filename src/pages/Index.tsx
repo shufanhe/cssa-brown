@@ -9,6 +9,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Link, useNavigate } from 'react-router-dom';
 import RibbonTrail from '../components/RibbonTrail';
+import emailjs from '@emailjs/browser';
 
 const Index: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,6 +24,7 @@ const Index: React.FC = () => {
 
   const [email, setEmail] = useState("");
   const [showNewStudentTitle, setShowNewStudentTitle] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const navigate = useNavigate();
 
@@ -48,14 +50,51 @@ const Index: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+
+    setIsSubmitting(true);
+
+    try {
+      // EmailJS configuration from environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const recipientEmail = import.meta.env.VITE_RECIPIENT_EMAIL;
+
+      // Check if EmailJS is configured
+      if (!serviceId || !templateId || !publicKey || !recipientEmail) {
+        throw new Error('EmailJS configuration is missing. Please check environment variables.');
+      }
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          to_email: recipientEmail,
+          subscriber_email: email,
+          message: `New newsletter subscription from: ${email}`,
+        },
+        publicKey
+      );
+
       toast({
         title: "Successfully subscribed!",
         description: "Thank you for subscribing to our newsletter.",
       });
       setShowNewsletter(false);
+      setEmail("");
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Subscription failed",
+        description: "There was an error processing your subscription. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -95,8 +134,9 @@ const Index: React.FC = () => {
               <Button
                 type="submit"
                 className="bg-[#a0202b] hover:bg-[#8a1b24] text-white"
+                disabled={isSubmitting}
               >
-                Subscribe
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
               </Button>
             </div>
           </form>
