@@ -63,12 +63,26 @@ const Events = () => {
     setActiveIndex(closestIndex);
   };
 
+  
+
   return (
     <div className="min-h-screen font-['Georgia'] bg-white flex flex-col">
+      <style>
+        {`
+          .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+          }
+
+          .no-scrollbar::-webkit-scrollbar {
+            display: none;  /* Chrome, Safari and Opera */
+          }
+        `}
+      </style>
       <Header />
 
       {/* Events Section */}
-      <section id="events" className="relative flex-1 min-h-[calc(100vh-6rem)] bg-white overflow-hidden flex flex-col justify-center pt-52 pb-32">
+      <section id="events" className="relative flex-1 min-h-[calc(100vh-6rem)] bg-white overflow-hidden flex flex-col justify-center pt-32 pb-24">
         <RibbonTrail />
 
         {/* Background corners */}
@@ -79,18 +93,21 @@ const Events = () => {
         <div
           ref={containerRef}
           onScroll={handleScroll}
-          className="flex items-center overflow-x-auto no-scrollbar gap-8 px-8 z-10 scroll-smooth"
+          className="flex items-center overflow-x-auto overflow-y-visible no-scrollbar gap-12 px-8 z-10 scroll-smooth py-20"
         >
+
           {events.map((event, index) => {
             const isActive = index === activeIndex;
             return (
               <motion.div
                 key={index}
                 onClick={() => scrollToIndex(index)}
-                animate={{ scale: isActive ? 1.05 : 0.9 }}
+                animate={{ scale: isActive ? 1.2 : 0.9 }} // adjust scale as desired
                 transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 className="flex-shrink-0 w-[90%] md:w-[70%] lg:w-[55%] xl:w-[50%] rounded-2xl overflow-hidden shadow-lg cursor-pointer group bg-white/90 backdrop-blur-sm"
               >
+
+
                 <img
                   src={import.meta.env.BASE_URL + "uploads/" + event.imgId}
                   alt={event.title}
