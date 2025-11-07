@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const navItems: string[] = ["Events", "Info", "Contact", "Credits"];
+const navItems: string[] = ["Events", "Info", "Contact", "Partners"];
 
 const Header: React.FC = () => {
   return (
@@ -33,6 +33,7 @@ const Header: React.FC = () => {
               href={
                 item === "Info" ? "#/information-hub" 
                 : item === "Events" ? "#/events" 
+                
                 : `#/${item.toLowerCase()}`
               }
               className="nav-link text-[#a0202b] text-xl font-bold"
