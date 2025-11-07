@@ -144,7 +144,7 @@ const Index: React.FC = () => {
               <motion.img 
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                src={import.meta.env.BASE_URL + "/uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"}
+                src={import.meta.env.BASE_URL + "uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"}
                 alt="CSSA Logo"
                 className="w-[312px] mx-auto"
               />
