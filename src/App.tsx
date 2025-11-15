@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import InformationHub from "./pages/InformationHub";
 import Partners from "./pages/Partners";
+import Credits from "./pages/Credits"
 import Box from "./pages/ppl"
 import { HashRouter, Routes, Route } from "react-router-dom";
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/information-hub/*" element={<InformationHub />} />
           <Route path="/info" element={<InformationHub />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/credits" element={<Credits />} />
           <Route path="/ppl" element={<Box />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

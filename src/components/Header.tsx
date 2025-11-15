@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const navItems: string[] = ["Events", "Info", "Contact", "Partners"];
+const navItems: string[] = ["Events", "Info", "Contact", "Partners", "Credits"];
 
 const Header: React.FC = () => {
   return (
