@@ -208,8 +208,8 @@ const InformationHub = () => {
       <Header />
 
       {/* Background corners */}
-      <img src={import.meta.env.BASE_URL + "uploads/bottom-left.png"} alt="Top Left" className="absolute top-24 left-0 w-[20rem] h-auto object-contain opacity-90 z-0" />
-      <img src={import.meta.env.BASE_URL + "uploads/bottom-right.png"} alt="Bottom Right" className="absolute bottom-56 right-0 w-[24rem] h-auto object-contain opacity-90 z-0" />
+      <img src={import.meta.env.BASE_URL + "uploads/bottom-left.png"} alt="Top Left" className="absolute top-24 left-0 w-[20rem] h-auto object-contain opacity-90 z-0 hidden sm:block" />
+      <img src={import.meta.env.BASE_URL + "uploads/bottom-right.png"} alt="Bottom Right" className="absolute bottom-56 right-0 w-[24rem] h-auto object-contain opacity-90 z-0 hidden sm:block" />
 
       <div className="container mx-auto pt-44 pb-16 px-4 relative z-10">
         <motion.div

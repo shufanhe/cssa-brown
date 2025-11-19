@@ -10,7 +10,7 @@ const Contact = () => {
       <RibbonTrail />
       <Header />
 
-      <div className="flex-1 container mx-auto px-2 pt-40 pb-16">
+      <div className="flex-1 container mx-auto px-8 sm:px-6 pt-40 md:pt-40 pb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,11 +80,11 @@ const Contact = () => {
           </div>
 
           {/* Right column: single image */}
-          <div className="flex justify-start md:justify-end">
+          <div className="flex justify-start pt-8 md:justify-end">
             <img
               src={import.meta.env.BASE_URL + "uploads/logo.png"}
               alt="CSSA Logo"
-              className="w-40 md:w-48 h-auto rounded-lg"
+              className="w-40 sm:w-44 md:w-48 h-auto rounded-lg"
             />
           </div>
         </motion.div>

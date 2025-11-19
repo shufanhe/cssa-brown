@@ -3,10 +3,10 @@ import React from "react";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#FF6363]/[0.04] text-[#a0202b] mt-0 py-10 px-6 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between gap-8 text-sm">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-8 text-sm">
 
         {/* Disclaimer */}
-        <div className="flex-1 text-sm md:text-left">
+        <div className="flex-1 text-center md:text-left">
           <p>
             The content of UCS/GSC recognized student organization websites is generated independently from Brown University. The statements, views, opinions, and information contained on the site are personal to those of the authors and student organization and do not necessarily reflect those of Brown University. The content on the site is not reviewed, approved, or endorsed by Brown University or its faculty or staff.
           </p>
@@ -55,10 +55,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-
-
         {/* CSSA Logo */}
-        <div className="flex items-center justify-end flex-shrink-0">
+        <div className="flex items-center justify-center md:justify-end flex-shrink-0">
           <img 
             src={import.meta.env.BASE_URL + "uploads/5fac0ddc-b050-45a1-9902-5e3641a02156.png"}
             alt="CSSA Logo" 
