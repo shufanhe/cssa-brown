@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
             >
               <img
-                src={import.meta.env.BASE_URL + "uploads/WeChat.png"} // small icon
+                src={import.meta.env.BASE_URL + "uploads/WeChat.png"}
                 alt="WeChat"
                 className="h-6 w-6 cursor-pointer hover:opacity-80 transition-opacity"
               />

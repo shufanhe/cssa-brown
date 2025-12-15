@@ -44,8 +44,20 @@ const Partners = () => {
                 <p className="font-semibold text-lg">竹韵琴社</p>
                 <p className="text-gray-600 text-sm md:text-base">BAMBOO RHYME</p>
                 <div className="flex space-x-2 mt-2">
-                  <img src={import.meta.env.BASE_URL + "uploads/Instagram.png"} alt="Instagram" className="h-4 w-4" />
-                  <img src={import.meta.env.BASE_URL + "uploads/email.png"} alt="Email" className="h-4 w-4" />
+                  <a 
+                    href="https://www.instagram.com/bamboo_rhyme_brown/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <img src={import.meta.env.BASE_URL + "uploads/Instagram.png"} alt="Instagram" className="h-4 w-4" />
+                  </a>
+                  <a 
+                    href="bamboorhyme@brown.edu"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <img src={import.meta.env.BASE_URL + "uploads/email.png"} alt="Email" className="h-4 w-4" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -63,8 +75,14 @@ const Partners = () => {
                 <p className="font-semibold text-lg">山上剧社</p>
                 <p className="text-gray-600 text-sm md:text-base">UPHILL CHINESE THEATRE</p>
                 <div className="flex space-x-2 mt-2">
-                  <img src={import.meta.env.BASE_URL + "uploads/WeChat.png"} alt="WeChat" className="h-4 w-4" />
-                </div>
+                  <a 
+                    href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=Mzg2NzA4NzYyNg==&scene=124&#wechat_redirect" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <img src={import.meta.env.BASE_URL + "uploads/WeChat.png"} alt="WeChat" className="h-4 w-4" />
+                  </a>                </div>
               </div>
             </div>
 
@@ -81,8 +99,21 @@ const Partners = () => {
                 <p className="font-semibold text-lg">RISD 中国学联</p>
                 <p className="text-gray-600 text-sm md:text-base">RISD CSSA</p>
                 <div className="flex space-x-2 mt-2">
-                  <img src={import.meta.env.BASE_URL + "uploads/Instagram.png"} alt="Instagram" className="h-4 w-4" />
-                  <img src={import.meta.env.BASE_URL + "uploads/WeChat.png"} alt="WeChat" className="h-4 w-4" />
+                  <a 
+                    href="https://www.instagram.com/risd_cssa/?hl=en" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <img src={import.meta.env.BASE_URL + "uploads/Instagram.png"} alt="Instagram" className="h-4 w-4" />
+                  </a>
+                  <a
+                    href={import.meta.env.BASE_URL + "uploads/RISDCSSA_qr.png"} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={import.meta.env.BASE_URL + "uploads/WeChat.png"} alt="WeChat" className="h-4 w-4" />
+                  </a>
                 </div>
               </div>
             </div>

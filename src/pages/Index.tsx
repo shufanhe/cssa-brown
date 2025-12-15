@@ -157,7 +157,7 @@ const Index: React.FC = () => {
                   initial={{ scale: 0.9, y: 20 }}
                   animate={{ scale: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  className="text-4xl md:text-6xl font-bold text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.3)] [text-shadow:_2px_2px_4px_rgb(0_0_0_/_50%)]"
+                  className="text-4xl md:text-6xl font-bold text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.3)] [text-shadow:_2px_2px_4px_rgb(0_0_0_/_70%)]"
                 >
                   Welcome to Brown CSSA
                 </motion.h1>
@@ -165,7 +165,7 @@ const Index: React.FC = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="text-lg md:text-xl max-w-2xl mx-auto text-white drop-shadow-lg"
+                  className="text-lg md:text-xl max-w-2xl mx-auto text-white drop-shadow-lg [text-shadow:_2px_2px_4px_rgb(0_0_0_/_60%)]"
                 >
                   Chinese Students and Scholars Association
                 </motion.p>
@@ -174,6 +174,7 @@ const Index: React.FC = () => {
             }
           </motion.div>
           
+          {/*
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -188,34 +189,36 @@ const Index: React.FC = () => {
                 ease: "easeInOut"
               }}
             >
-              <ChevronDown className="w-8 h-8 text-white drop-shadow-lg" />
+              <ChevronDown className="w-8 h-8 text-white drop-shadow-lg " />
             </motion.div>
           </motion.div>
+          */}
         </div>
       </section>
-
+      
       {/* Introduction */}
       <section id="who-we-are" className="relative min-h-[calc(100vh-6rem)] bg-white overflow-hidden flex flex-col justify-center">        
         {/* Background corners */}
+        {/* Added 'hidden md:block' to all images below */}
         <img 
           src={import.meta.env.BASE_URL + "uploads/top-left.png"} 
           alt="Top Left"
-          className="absolute top-0 left-0 w-96 h-auto object-contain"
+          className="hidden md:block absolute top-0 left-0 w-96 h-auto object-contain"
         />
         <img 
           src={import.meta.env.BASE_URL + "uploads/top-right.png"} 
           alt="Top Right"
-          className="absolute top-0 right-0 w-96 h-auto object-contain"
+          className="hidden md:block absolute top-0 right-0 w-96 h-auto object-contain"
         />
         <img 
           src={import.meta.env.BASE_URL + "uploads/bottom-left.png"} 
           alt="Bottom Left"
-          className="absolute bottom-0 left-0 w-96 h-auto object-contain"
+          className=" absolute bottom-0 left-0 w-96 h-auto object-contain"
         />
         <img 
           src={import.meta.env.BASE_URL + "uploads/bottom-right.png"} 
           alt="Bottom Right"
-          className="absolute bottom-0 right-0 w-96 h-auto object-contain"
+          className="hidden md:block absolute bottom-0 right-0 w-96 h-auto object-contain"
         />
 
         {/* Content */}
@@ -304,12 +307,12 @@ const Index: React.FC = () => {
         <img 
           src={import.meta.env.BASE_URL + "uploads/top-right.png"} 
           alt="Top Right"
-          className="absolute top-0 right-0 w-96 h-auto object-contain"
+          className="hidden md:block absolute top-0 right-0 w-96 h-auto object-contain"
         />
         <img 
           src={import.meta.env.BASE_URL + "uploads/bottom-left.png"} 
           alt="Bottom Left"
-          className="absolute bottom-0 left-0 w-96 h-auto object-contain"
+          className="hidden md:block absolute bottom-0 left-0 w-96 h-auto object-contain"
         />
         <img 
           src={import.meta.env.BASE_URL + "uploads/bottom-right.png"} 
