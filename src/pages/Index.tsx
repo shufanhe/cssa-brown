@@ -67,43 +67,45 @@ const Index: React.FC = () => {
     <div className="min-h-screen font-['Georgia'] relative">
       <RibbonTrail />
       {/* Newsletter Dialog */}
-      <Dialog open={showNewsletter} onOpenChange={setShowNewsletter}>
-        <DialogContent className="sm:max-w-[425px] bg-white">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-[#a0202b]">
-              Stay Connected with Brown CSSA!
-            </DialogTitle>
-            <DialogDescription className="text-lg">
-              Subscribe to our newsletter to stay updated with our latest events and activities.
-            </DialogDescription>
-          </DialogHeader>
-          <form onSubmit={handleSubscribe} className="space-y-4">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full"
-              required
-            />
-            <div className="flex justify-end space-x-2">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => setShowNewsletter(false)}
-              >
-                Maybe Later
-              </Button>
-              <Button
-                type="submit"
-                className="bg-[#a0202b] hover:bg-[#8a1b24] text-white"
-              >
-                Subscribe
-              </Button>
-            </div>
-          </form>
-        </DialogContent>
-      </Dialog>
+      {/*
+        <Dialog open={showNewsletter} onOpenChange={setShowNewsletter}>
+          <DialogContent className="sm:max-w-[425px] bg-white">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold text-[#a0202b]">
+                Stay Connected with Brown CSSA!
+              </DialogTitle>
+              <DialogDescription className="text-lg">
+                Subscribe to our newsletter to stay updated with our latest events and activities.
+              </DialogDescription>
+            </DialogHeader>
+            <form onSubmit={handleSubscribe} className="space-y-4">
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full"
+                required
+              />
+              <div className="flex justify-end space-x-2">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => setShowNewsletter(false)}
+                >
+                  Maybe Later
+                </Button>
+                <Button
+                  type="submit"
+                  className="bg-[#a0202b] hover:bg-[#8a1b24] text-white"
+                >
+                  Subscribe
+                </Button>
+              </div>
+            </form>
+          </DialogContent>
+        </Dialog>
+      */}
 
       <Header />
 
